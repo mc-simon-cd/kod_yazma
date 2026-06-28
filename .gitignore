@@ -24,10 +24,6 @@ build/
 target/
 .gradle/
 
-# OS generated files
-.DS_Store
-Thumbs.db
-
 # Compiled files
 *.pyc
 *.class
@@ -39,7 +35,9 @@ Thumbs.db
 *.obj
 *.out
 
-# Coverage
+# System files
+.DS_Store
+Thumbs.db
 coverage/
 htmlcov/
 .coverage

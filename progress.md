@@ -172,6 +172,61 @@ Henüz raporlanmış sorun bulunmamaktadır.
 | `status: review` | #c2e0c6 | İncelemede |
 | `status: blocked` | #e11d21 | Engellenmiş |
 
+---
+
+## 3. 📅 Sprint Planlama
+
+### Sprint Yapısı
+- **Sprint Süresi:** 2 Hafta
+- **Planlama Toplantısı:** Her sprint başı (Pazartesi 10:00)
+- **Daily Standup:** Her gün 09:30 (15 dk)
+- **Review & Retro:** Sprint sonu (Cuma 14:00)
+
+### Mevcut Sprint: Sprint 1 (Temel Altyapı)
+| Başlık | Detaylar |
+|--------|----------|
+| **Hedef** | Proje iskeletini oluşturmak ve temel CLI'ı çalışır hale getirmek |
+| **Başlangıç** | 2024-01-15 |
+| **Bitiş** | 2024-01-26 |
+| **Kapasite** | 60 Story Point |
+| **Taahhüt** | 55 Story Point |
+
+### Sprint 1 Görevleri
+| ID | Görev | Puan | Sorumlu | Durum |
+|----|-------|------|---------|-------|
+| INF-101 | Python paket yapısı | 5 | Backend Lead | 🟢 Done |
+| INF-102 | CLI temel komutlar | 8 | Backend Team | 🟡 In Progress |
+| INF-103 | Config sistemi | 5 | Backend Team | ⚪ Todo |
+| INF-104 | Logging altyapısı | 3 | DevOps | ⚪ Todo |
+| INF-105 | Error handling standardları | 5 | Tech Lead | 🟡 In Progress |
+| INF-106 | Git workflow kurulumu | 2 | DevOps | 🟢 Done |
+| INF-107 | CI pipeline temelleri | 8 | DevOps | ⚪ Todo |
+| INF-108 | Unit test framework | 5 | QA Lead | ⚪ Todo |
+| INF-109 | Dokümantasyon iskeleti | 3 | Tech Writer | 🟡 In Progress |
+| INF-110 | Code formatter entegrasyonu | 2 | DevOps | 🟢 Done |
+
+### Geçmiş Sprintler
+*Henüz tamamlanan sprint bulunmamaktadır.*
+
+### Burndown Chart (Sprint 1 - Tahmini)
+```
+Gün 1 : ████████████████████████ 55 SP
+Gün 3 : ███████████████████      42 SP
+Gün 5 : ██████████████           30 SP
+Gün 7 : ██████████               20 SP
+Gün 10: ██████                   10 SP
+Gün 14: ██                        2 SP
+```
+
+### Velocity Tracking
+| Sprint | Planlanan | Tamamlanan | Velocity | Sapma |
+|--------|-----------|------------|----------|-------|
+| Sprint 1 | 55 SP | - | - | - |
+
+---
+
+## 4. 📜 Sürüm Geçmişi (Changelog)
+
 ### Issue Workflow
 
 ```mermaid
@@ -524,3 +579,111 @@ make release
 ```
 
 ---
+
+## 📊 Performans Ölçütleri
+
+### Kod Kalitesi Metrikleri
+
+| Metrik | Hedef | Mevcut | Durum | Trend |
+|--------|-------|--------|-------|-------|
+| **Kod Kapsama Oranı** | ≥90% | %87 | ⚠️ | 📈 +2% |
+| **Teknik Borç Oranı** | <5% | %6.2 | ⚠️ | 📉 -0.5% |
+| **Cyclomatic Complexity** | <10 | 8.4 | ✅ | ➡️ Stabil |
+| **Duplicate Code** | <3% | %2.1 | ✅ | 📉 -0.3% |
+| **Maintainability Index** | ≥80 | 82 | ✅ | 📈 +1 |
+| **Security Vulnerabilities** | 0 | 0 | ✅ | ➡️ Stabil |
+
+### Build & Deployment Metrikleri
+
+| Metrik | Hedef | Ortalama | P95 | P99 | Durum |
+|--------|-------|----------|-----|-----|-------|
+| **CI Pipeline Süresi** | <10 dk | 7dk 23sn | 9dk 12sn | 11dk 45sn | ⚠️ |
+| **CD Deployment Süresi** | <5 dk | 3dk 45sn | 4dk 30sn | 5dk 10sn | ✅ |
+| **Build Başarı Oranı** | ≥95% | %97.2 | - | - | ✅ |
+| **Rollback Oranı** | <2% | %1.1 | - | - | ✅ |
+| **Deployment Frequency** | Günlük | 2.3/gün | - | - | ✅ |
+
+### Uygulama Performansı
+
+| Metrik | Hedef | Production | Staging | Durum |
+|--------|-------|------------|---------|-------|
+| **Ortalama Yanıt Süresi** | <200ms | 145ms | 162ms | ✅ |
+| **P95 Yanıt Süresi** | <500ms | 387ms | 421ms | ✅ |
+| **P99 Yanıt Süresi** | <1000ms | 756ms | 834ms | ✅ |
+| **Hata Oranı** | <0.1% | %0.05 | %0.08 | ✅ |
+| **Throughput (istek/sn)** | ≥1000 | 1,247 | 986 | ✅ |
+| **CPU Kullanımı** | <70% | %54 | %61 | ✅ |
+| **Bellek Kullanımı** | <80% | %67 | %72 | ✅ |
+
+### Test Metrikleri
+
+```mermaid
+pie title Test Dağılımı
+    "Unit Tests" : 65
+    "Integration Tests" : 20
+    "E2E Tests" : 10
+    "Performance Tests" : 5
+```
+
+| Test Türü | Toplam Test | Geçen | Başarısız | Atlanmış | Kapsama |
+|-----------|-------------|-------|-----------|----------|---------|
+| **Unit Tests** | 1,247 | 1,245 | 2 | 0 | %87 |
+| **Integration Tests** | 342 | 340 | 1 | 1 | %76 |
+| **E2E Tests** | 89 | 88 | 1 | 0 | %62 |
+| **Performance Tests** | 24 | 24 | 0 | 0 | - |
+| **Security Tests** | 56 | 56 | 0 | 0 | - |
+| **TOPLAM** | **1,758** | **1,753** | **4** | **1** | **%87** |
+
+### Developer Experience Metrikleri
+
+| Metrik | Değer | Hedef | Durum |
+|--------|-------|-------|-------|
+| **Ortalama Code Review Süresi** | 4.2 saat | <8 saat | ✅ |
+| **PR Merge Süresi (ortalama)** | 1.3 gün | <2 gün | ✅ |
+| **PR Başına Yorum Sayısı** | 3.7 | 2-5 | ✅ |
+| **Developer Satisfaction Score** | 8.4/10 | >8/10 | ✅ |
+| **Onboarding Süresi** | 2.5 gün | <3 gün | ✅ |
+| **Local Build Süresi** | 45sn | <60sn | ✅ |
+
+### Maliyet Metrikleri (Aylık)
+
+| Kaynak | Bütçe | Harcama | Fark | Durum |
+|--------|-------|---------|------|-------|
+| **AWS EC2** | $2,000 | $1,847 | +$153 | ✅ |
+| **AWS Lambda** | $500 | $423 | +$77 | ✅ |
+| **AWS RDS** | $1,200 | $1,156 | +$44 | ✅ |
+| **AWS S3** | $300 | $267 | +$33 | ✅ |
+| **Monitoring Tools** | $400 | $395 | +$5 | ✅ |
+| **CI/CD Services** | $250 | $234 | +$16 | ✅ |
+| **TOPLAM** | **$4,650** | **$4,322** | **+$328** | ✅ |
+
+### İyileştirme Alanları
+
+#### 🔴 Kritik Öncelik
+- [ ] Kod kapsama oranını %90'a çıkarmak (Mevcut: %87)
+- [ ] CI pipeline süresini 10 dakikanın altına düşürmek (Mevcut: 7dk 23sn, P99: 11dk 45sn)
+- [ ] Teknik borç oranını %5'in altına indirmek (Mevcut: %6.2)
+
+#### 🟡 Orta Öncelik
+- [ ] Integration test kapsamını %80'e çıkarmak (Mevcut: %76)
+- [ ] E2E test kapsamını %70'e çıkarmak (Mevcut: %62)
+- [ ] P99 yanıt süresini 700ms'in altına düşürmek (Mevcut: 756ms)
+
+#### 🟢 Düşük Öncelik
+- [ ] Duplicate code oranını %2'nin altına düşürmek (Mevcut: %2.1)
+- [ ] Ortalama code review süresini 3 saatin altına indirmek (Mevcut: 4.2 saat)
+
+### Otomatik Raporlama
+
+Performans metrikleri otomatik olarak şu araçlarla toplanır:
+- **Kod Kalitesi**: SonarQube, CodeClimate
+- **CI/CD**: GitHub Actions, Jenkins
+- **APM**: Datadog, New Relic
+- **Logging**: ELK Stack, CloudWatch
+- **Cost**: AWS Cost Explorer, CloudHealth
+
+Raporlar her hafta Pazartesi günü otomatik oluşturulur ve #performance kanalında paylaşılır.
+
+---
+
+## 🤝 Katkıda Bulunma Kuralları
