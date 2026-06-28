@@ -1,0 +1,224 @@
+# Cloud Sync için Ignore Kuralları (.cloudeignore)
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+Pipfile.lock
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Node.js (web interface için)
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnpm-store/
+
+# Build outputs
+build/
+dist/
+out/
+*.min.js
+*.min.css
+
+# Logs
+logs/
+*.log
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Dokümantasyon build
+docs/_build/
+site/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Secrets and credentials
+*.pem
+*.key
+secrets/
+credentials/
+config.secrets.yaml
+config.*.secret.yaml
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Test fixtures with sensitive data
+tests/fixtures/secrets/
+tests/**/credentials.json
+
+# Local development overrides
+docker-compose.override.yml
+local.*.yaml
+local.*.json
+
+# Performance profiling
+*.prof
+.profiling/
+
+# Cache directories
+.cache/
+*.cache
+
+# Lock files (keep package locks, ignore others)
+# Keep: requirements.txt, package-lock.json, yarn.lock
+# Ignore:
+Gemfile.lock
+Cargo.lock
+poetry.lock
+
+# Machine-specific files
+.machine-id
+*.machine
+
+# Generated documentation that can be rebuilt
+apidoc/
+generated/
+
+# Large binary files (sync separately if needed)
+*.bin
+*.exe
+*.dll
+*.dylib
+*.pdb
+
+# Model weights (too large for sync)
+models/*.bin
+models/*.pt
+models/*.pth
+models/*.h5
+*.onnx
+
+# Dataset files
+data/raw/
+data/processed/
+datasets/
+
+# Video and audio files
+*.mp4
+*.avi
+*.mov
+*.mp3
+*.wav
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# Container images
+*.dockerimage
+
+# Terraform state (use remote backend)
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Kubernetes secrets
+*-secret.yaml
+*-secrets.yaml
+
+# IDE specific (additional)
+*.iml
+*.ipr
+*.iws
+*.idea/
+
+# Editor specific
+*.sublime-project
+*.sublime-workspace
+
+# Misc
+*.orig
+*.patch
+*.diff
+MERGE_MSG
+FETCH_HEAD
+ORIG_HEAD
+CHERRY_PICK_HEAD
